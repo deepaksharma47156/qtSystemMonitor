@@ -83,7 +83,7 @@ void systemMonitorProcessing::updateCPUInfo()
     p.waitForFinished();
 
     qs_cpuload = p.readAllStandardOutput();
-    if(100 >= QString(qs_cpuload).toInt() || 0 >= QString(qs_cpuload).toInt())
+    if(100 > QString(qs_cpuload).toInt() || 0 >= QString(qs_cpuload).toInt())
     {
         x_systemProp.aqs_cpuload = qs_cpuload;
     }
